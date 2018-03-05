@@ -1,0 +1,525 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Karvaan '18</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, minimal-ui">
+    <meta name="description" content="Annual fest of SRCASW">
+
+    <meta property="og:type" content="website"/> 
+    <meta property="og:title" content="Karvaan '18"/> 
+    <meta property="og:site_name" content="Karvaan'18 - Home"/> 
+    <meta property="og:description" content="The annual cultural fest of Shaheed Rajguru College of Applied Sciences for Women"/>
+    <meta property="og:image" content=" "/> 
+    <meta property="og:url" content=""/>
+    
+    <meta property="fb:admins" content=""/> 
+
+    <meta charset="utf-8" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" type="text/css" href="https://karvaan.co/web/css/main.css" data-skrollr-stylesheet />
+    <link rel="stylesheet" type"text/css" href="https://karvaan.co/web/css/custom.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" >
+    <style>
+    .customholder {
+  cursor: pointer;
+}
+  
+  .img-text{
+	    position: absolute;
+	    top: 0; right: 0;
+	    bottom: 0; left: 0;
+	    text-align: center;
+	    background-color: rgba(0,0,0,0.3);
+	    opacity: 0;
+	    -webkit-transition: opacity 0.6s;
+	    -moz-transition: opacity 0.6s;
+	    transition: opacity 0.6s;
+       vertical-align:middle;
+       line-height:200px;
+	}
+
+	.img-text:hover{
+	    opacity: 1;      
+	}
+
+	.img-text h4{
+	    color: white;
+	    display: inline-table;
+       vertical-align:middle;
+       line-height:100%;            
+	}
+
+    #headerpanel {
+        display:none;
+        text-align:center;
+        font-family:patua-one;
+        font-size:.75em;
+        color:#fff;
+        z-index:1000;
+    }
+    
+    #headerpanel,#headerpanel .banner{
+        position:fixed;
+        height:3em;
+        width:100%;
+    }
+    #headerpanel .banner{
+        display:inline-block;
+        padding-right:1em;
+        padding-left:1em;
+        top:1em;
+        left:.1em;
+        z-index:100;
+    }
+    #headerpanel .banner img{
+        display:inline-block;
+        max-width:100%;
+        width:100%;
+        height:100%;
+    }
+    #headerpanel .centerhead{
+        display:inline-block;
+        position:absolute;
+        left:0;
+        right:0;
+        top:.5em;
+        margin:auto;
+        width:12.5%;
+        z-index:105;
+    }
+    #headerpanel .centerhead img{
+        max-width:100%
+    }
+    #headerpanel .centerhead #normal{
+        display:none
+    }
+    #headerpanel .centerhead span{
+        display:none;
+    }
+    #headerpanel .centerhead #small{
+        display:inline
+    }
+    #headerpanel .left-panel{
+        list-style-type:none;
+        position:absolute;
+        top:40%;
+        left:10%;
+        padding:0;
+        width:35%;
+        text-align:center;
+        z-index:102;
+        height:100%;
+        margin-bottom:5%;
+        margin-top: 0%;
+        display:block;
+    }
+    #headerpanel .left-panel ul{
+        position:absolute;
+    }
+    #headerpanel .left-panel li{
+        width:33%;
+        display:inline;
+        vertical-align:middle;
+        padding-left:2%;
+        padding-right:2%;
+        box-sizing:border-box;
+    }
+    
+    #headerpanel .left-panel li > a{
+        color: #fff;
+    }
+    
+    #headerpanel .right-panel{
+        list-style-type:none;
+        position:absolute;
+        top:40%;
+        right:10%;
+        width:35%;
+        padding:0;
+        text-align:center;
+        z-index:102;
+        height:100%;
+        margin-bottom:5%;
+        margin-top: 0%;
+        display: block;
+    }
+    
+    #headerpanel .right-panel li{
+        width:33%;
+        display:inline;
+        vertical-align:middle;
+        padding-left:1%;
+        padding-right:1%;
+        margin:0;
+    }
+
+    
+    #headerpanel .right-panel li > a{
+        color: #fff;
+    }
+    
+    #headerpanel .headeractive{
+        color:#5dfbcb;
+    }
+    
+    @media (max-width:800px){
+        #headerpanel .centerhead span{
+            display:block;
+        }
+        #headerpanel .right-panel{
+            display:none;
+        }
+    
+        #headerpanel .left-panel{
+            display:none;
+        }
+    }
+    
+    @media (min-width:800px){
+        #headerpanel{
+            font-size:1.5em;
+            display:inline;
+        }
+        #headerpanel .centerhead{
+            top:1.3em;
+            width: 100%;
+        }
+    }
+    @media (min-width:950px){
+        #headerpanel{
+            font-size:.8em;
+        }
+        #headerpanel .banner{
+            padding-right:2em;
+            padding-left:2em;
+        }
+        #headerpanel .right-panel li{
+            padding-right:.1%;
+            padding-left:.1%;
+        }
+        #headerpanel .centerhead{
+            top:1em;
+        }
+        #headerpanel .centerhead #small{
+            display:none;
+        }
+        #headerpanel .centerhead #normal{
+            display:inline;
+        }
+    }
+    @media (min-width:1000px){
+        #headerpanel .right-panel li{
+            padding-right:1%;
+            padding-left:1%;
+        }
+        #headerpanel .left-panel li{
+            padding-left:2.5%;
+            padding-right:2.5%;
+        }
+        #headerpanel .centerhead{
+            top:.7em;
+        }
+    }
+    @media (min-width:1500px){
+        #headerpanel{
+            font-size:1.3em;
+        }
+        #headerpanel .centerhead{
+            top:.4em;
+        }
+        #headerpanel .left-panel li{
+            padding-left:2.1%;
+            padding-right:2.1%;
+        }
+        #headerpanel .right-panel li{
+            padding-right:1.3%;
+            padding-left:1.3%;
+        }
+    }
+    </style>
+  </head>
+<body data-15062="background-color: hsla(198,67%,86%,1);" data-16062="background-color: hsla(198,67%,86%,1);" style="background-color: rgb(196, 229, 244); height: 35042px;">
+    
+    
+    <header class="header">
+
+        <div id="headerpanel">
+
+            <div class="banner">
+                <img src="img/header-banner.png">
+            </div>  
+
+            <div class="centerhead">
+                <span class="swipetext">Swipe here to scroll</span>
+                <!-- <img src="images/header-center-small.png" id="small">
+                <img src="images/header-center.png" id="normal"> -->
+            </div>
+
+            <ul class="left-panel">
+                <li><a href="#" data-menu-top="0" data-menu-duration="2000">Home</a> </li>
+                <li><a href="#eventJS" data-menu-top="5000">Events</a></li>
+                <li><a href="" id="testing" >About Karvaan</a></li>
+            </ul>
+            
+            <ul class="right-panel">
+                <li><a href="#">Sponsors</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+
+        </div>
+    
+    </header>
+    
+    <nav class="menu" style="z-index:251230;">
+        <div id="nav-toggle"></div>
+        <label class="menu-open-button">
+            <span class="hamburger hamburger-1"></span>
+            <span class="hamburger hamburger-2"></span>
+            <span class="hamburger hamburger-3"></span>
+        </label>
+  
+        <a href="#bgJS" data-menu-top="8000" class="menu-item" onclick=""> <i class="fa fa-bar-chart"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-plus"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-heart"></i> </a>
+        <a href="#" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+    </nav>
+
+	
+	<div class="intro portrait" style="display: none;">
+		<div class="info" data-1000=" left: 50%;" data-3960=" left: -100%;" data-top=" left: 50%;" style="left: 50%;">
+			<main>
+				<h2>Karvaan'18</h2>
+				<p>The annual cultural fest of Shaheed Rajguru College of Applied Sciences for Women</p>
+				<p>13th & 14th March 2018</p>
+				<p><span class="go go-block">Turn your device sideways & make sure auto rotation is on</span></p>
+			</main>
+		</div>
+	</div>
+	<div class="position"></div>
+	<div id="bgJS" class="background landscape" style="z-index: 99;"> <!-- IMPORTANT ELSE IT WONT WORK - MJDG -->
+    <!--  <div class="building-day skrollable skrollable-before" data-15062="    opacity: 1; " data-25062="    opacity: 1; " style="opacity: 1;">
+        <div class="buildings-background skrollable skrollable-between" data-top="    background-position: 0px 0px;    bottom: -400px; " data-1000="    background-position: 0px 0px;    bottom: 0px; " data-12112="    background-position: -908.4px 0px; " data-32762="    background-position: -5505.4px 0px; " data-end="    background-position: -5505.4px 0px; " style="background-position: -0.910857px 0px; bottom: 0px;"></div>
+      </div>
+      <div class="building-night skrollable skrollable-between" data-top="    background-position: 0px 0px;    bottom: -400px; " data-1000="    background-position: 0px 0px;    bottom: 0px; " data-12112="    background-position: -908.4px 0px; " data-32762="    background-position: -908.4px 0px; " data-end="    background-position: -1009.65px 0px; " data-15062="    opacity: 0; " data-16062="    opacity: 1; " style="background-position: -0.910857px 0px; bottom: 0px; opacity: 0;">
+        <div class="buildings-background night skrollable skrollable-between" data-top="    background-position: 0px 0px;    bottom: -400px; " data-1000="    background-position: 0px 0px;    bottom: 0px; " data-12112="    background-position: -908.4px 0px; " data-32762="    background-position: -908.4px 0px; " data-end="    background-position: -1009.65px 0px; " style="background-position: -0.910857px 0px; bottom: 0px;"></div>
+      </div> -->
+      <div class="clouds">
+        <div class="cloud cloud1 skrollable skrollable-after" data-0="    bottom: 70%; " data-1000="    bottom: 100%; " style="bottom: 100%;"></div>
+        <div class="cloud cloud2 skrollable skrollable-after" data-0="    bottom: 50%; " data-1000="    bottom: 100%; " style="bottom: 100%;"></div>
+        <div class="cloud cloud3 skrollable skrollable-after" data-0="    bottom: 20%; " data-1000="    bottom: 100%; " style="bottom: 100%;"></div>
+        <div class="clouds-bg"></div>
+      </div>
+      <div id="eventJS" class="building-day skrollable skrollable-before" data-15062="    opacity: 1; " data-25062="    opacity: 1; " style="opacity: 1; z-index:99;">
+          <!-- <div class="buildings-foreground skrollable skrollable-before" data-top="    background-position: 0px 0px;    bottom: -600px; " data-1000="    background-position: 0px 0px;    bottom: 0px; "  data-25062="    background-position: -4105.4px 0px; " data-end="    background-position: -4105.4px 0px; " style="background-position: -1.82171px 0px; bottom: 0px; "> -->
+        <object type="image/svg+xml" data="img/buildings-fg-new.svg" data-top="    background-position: 0px 0px;    bottom: -600px; transform: translate(0px, 0px);" data-1000="    background-position: 0px 0px;    bottom: 0px; transform: translate(0px, 0px); "  data-25062="    background-position: -4105.4px 0px; transform: translate(-4105.4px, 0px);" data-end="    background-position: -4105.4px 0px; transform: translate(-4105.4px, 0px);" style="background-position: -1.82171px 0px; transform: translate(-1.82171px, 0px); bottom: 0px; position: absolute; height: 800px; background-size: 5550.4px 800px;"></object>
+          <!-- </div> -->
+      </div>
+    </div>
+	<div class="intro landscape" data-1000="z-index:102; opacity: 1;" data-3000="z-index:98; opacity:0;">
+		<div class="info" data-1000=" left: 50%;" data-3960=" left: -100%;" data-top=" left: 50%;" style="left: 50%;">
+			<main>
+				
+				<h2>Karvaan'18</h2>
+				<p>The annual cultural fest of Shaheed Rajguru College of Applied Sciences for Women</p>
+				<p>13th & 14th March 2018</p>
+				<p><span class="go">Scroll to Enter</span></p>
+			</main>
+		</div>
+	</div>
+	<div class="plane landscape" data-2800="opacity: 1; left:-30%; transform: scale(0.2); top:10%;" data-6000="opacity: 1; left:130%; transform: scale(0.4); top: -10%;" data-6000="opacity: 1; left:150%; transform: scale(0.4); top: -10%;" style="z-index:99;">
+	    <img src="https://karvaan.co/web/img/plane.png">
+	</div>
+	
+	
+	<div class="shop landscape" data-7000="opacity: 1; transform: translateX(110%);" data-14000="opacity:1; transform: translateX(-50%);" data-15000="opacity:0; transform: translateX(-50%);">
+		<div class="container">
+			<div class="event-dance" style="top:430px;"><a href="dance"><img src="https://karvaan.co/web/img/dance-test.png"></a></div>
+    	</div>
+    </div>
+    
+    <div class="overlay-event-dance" style="display:none; width:100%; height:100;">
+        <div class="container">
+            <h2>Downloads</h2>
+            <p class="lead">Some Text.....</p>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="customholder">
+
+                      <a href="LinkToImage">
+                        <img src="https://karvaan.co/web/img/dance.png" alt="AltText" class="img-fluid">
+                        <div class="img-text">
+                            <h4>BOOM!</h4>
+                        </div> 
+                      </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="customholder">
+
+                      <a href="LinkToImage">
+                        <img src="https://karvaan.co/web/img/dance.png" alt="AltText" class="img-fluid">
+                        <div class="img-text">
+                            <h4>BOOM!</h4>
+                        </div> 
+                      </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>            
+ 
+	<div class="credits landscape">
+		<div class="info " data-33112=" left: 50%;" data-34112=" left: -50%;" style="left: 50%;">
+			<main>
+				<a href="http://www.ao.com" title="AO">
+				<div class="logo">
+					ao
+				</div></a> <a class="btn" href="https://ao.com/life/wp-content/themes/aolife/wasteless/download/AO-Meal-Planner.pdf" target="_blank" title="Download your shopping list and meal planner">Meal Planner</a> <a class="btn" href="https://ao.com/life/wp-content/themes/aolife/wasteless/download/AO-Food-Labels.pdf" target="_blank" title="What you need to know about food labelling">Understanding Food Labels</a> <a class="btn" href="https://ao.com/life/wp-content/themes/aolife/wasteless/download/AO-Can-You-Freeze.pdf" target="_blank" title="A helpful guide to what food you can freeze">Will it Freeze?</a> <a class="btn" href="https://ao.com/life/" title="AO Life">AO Life</a>
+				<p><sup>1</sup>Statistic provided by <a href="http://england.lovefoodhatewaste.com/" style="border-bottom:1px dotted #fff" title="Love Food Hate Waste">Love Food Hate Waste</a></p>
+			</main>
+		</div>
+	</div><!-- CTA popup content -->
+
+	
+	<script src="https://karvaan.co/web/js/skrollr.stylesheets.min.js"></script> 
+	<script src="https://karvaan.co/web/js/skrollr-colors.js"></script> 
+	<script src="https://karvaan.co/web/js/skrollr.min.js"></script>
+	
+	<!--[if lte IE 11]>
+    <script type="text/javascript" src="https://ao.com/life/wp-content/themes/aolife/wasteless/js/skrollr.ie.min.js"></script>
+    <![endif]-->
+	 
+	<script src="https://karvaan.co/web/js/skrollr.menu.min.js"></script>
+	<script src="https://karvaan.co/web/js/jquery-1.11.2.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://karvaan.co/web/js/animate.js"></script> 
+	
+	<script>
+	$("#testing").click(function(e){
+        initSkrollr.animateTo(6000);
+    });
+	</script>
+	
+	<script>
+
+	     $(document).ready(function(){
+
+	       window.setInterval(function(){
+	         $('.primary-cta').addClass('tada').delay(4000).queue( function(next){
+	           $(this).removeClass('tada');
+	           next();
+	         });
+
+	       }, 8000);
+	       /*
+	       window.setInterval(function(){
+	         $('.hotspot').addClass('bigpulse').delay(2000).queue( function(next){
+	           $(this).removeClass('bigpulse');
+	           next();
+	         });
+
+	       }, 3000);
+	*/
+	     });
+
+	</script> 
+	
+	<script> /*<!-- add to main js later -->*/
+    $(document).ready(function(){
+        $("label").on('click', function () {
+            $("#nav-toggle").toggleClass("menu-open");
+        });
+    });
+    </script>
+
+    <script>
+	$("svg").find("g.node").click(function(){
+        alert("Lolol");
+    });
+    </script>
+    
+    <script>
+    var touchStartCoords =  {'x':-1, 'y':-1}, // X and Y coordinates on mousedown or touchstart events.
+    touchEndCoords = {'x':-1, 'y':-1},// X and Y coordinates on mouseup or touchend events.
+    direction = 'undefined',// Swipe direction
+    minDistanceXAxis = 30,// Min distance on mousemove or touchmove on the X axis
+    maxDistanceYAxis = 30,// Max distance on mousemove or touchmove on the Y axis
+    maxAllowedTime = 1000,// Max allowed time between swipeStart and swipeEnd
+    startTime = 0,// Time on swipeStart
+    elapsedTime = 0,// Elapsed time between swipeStart and swipeEnd
+    // 
+    targetElement1 = document.getElementById('bgJS');// Element to delegate
+
+    function swipeStart(e) {
+      e = e ? e : window.event;
+      e = ('changedTouches' in e)?e.changedTouches[0] : e;
+      touchStartCoords = {'x':e.pageX, 'y':e.pageY};
+      startTime = new Date().getTime();
+      targetElement1.style.zIndex = "99";
+    }
+    
+    function swipeMove(e){
+      e = e ? e : window.event;
+      e.preventDefault();
+    }
+    
+    function swipeEnd(e) {
+      e = e ? e : window.event;
+      e = ('changedTouches' in e)?e.changedTouches[0] : e;
+      touchEndCoords = {'x':e.pageX - touchStartCoords.x, 'y':e.pageY - touchStartCoords.y};
+      elapsedTime = new Date().getTime() - startTime;
+      if (elapsedTime <= maxAllowedTime){
+        if (Math.abs(touchEndCoords.x) >= minDistanceXAxis && Math.abs(touchEndCoords.y) <= maxDistanceYAxis){
+          direction = (touchEndCoords.x < 0)? 'left' : 'right';
+          switch(direction){
+            case 'left':
+              targetElement1.style.zIndex = "2";
+              break;
+            case 'right':
+              targetElement1.style.zIndex = "2";
+              break;
+          }
+        }
+      }
+    }
+    
+    function addMultipleListeners(el, s, fn) {
+      var evts = s.split(' ');
+      for (var i=0, iLen=evts.length; i<iLen; i++) {
+        el.addEventListener(evts[i], fn, false);
+      }
+    }
+    
+    addMultipleListeners(targetElement, 'mousedown touchstart', swipeStart);
+    addMultipleListeners(targetElement, 'mousemove touchmove', swipeMove);
+    addMultipleListeners(targetElement, 'mouseup touchend', swipeEnd);
+    </script>
+    
+    <!-- filters -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="shadowed-goo">
+              
+              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+              <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+              <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+              <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+              <feComposite in2="shadow" in="goo" result="goo" />
+              <feComposite in2="goo" in="SourceGraphic" result="mix" />
+          </filter>
+          <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+              <feComposite in2="goo" in="SourceGraphic" result="mix" />
+          </filter>
+        </defs>
+    </svg>
+	
+</body>
+</html>
