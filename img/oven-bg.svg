@@ -1,0 +1,13 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 502 275">
+<g id="Inside">
+  <rect fill="#26201A" width="502.441" height="275.609"/>
+  <rect x="50.392" y="38.232" fill="#605448" width="400.387" height="225.25"/>
+  <rect x="83.343" y="72.265" fill="#565656" width="338.484" height="168.072"/>
+  <rect x="83.343" y="72.265" fill="#26201A" width="338.484" height="3.557"/>
+  <polygon fill="#353535" points="118.476,217.761 83.343,240.337 83.343,72.265 118.476,72.265   "/>
+  <polygon fill="#353535" points="386.694,217.761 421.827,240.337 421.827,72.265 386.694,72.265   "/>
+  <rect x="83.343" y="221.205" fill="#26201A" width="338.484" height="3.557"/>
+  <rect x="94.644" y="213.205" fill="#26201A" width="311.883" height="3.557"/>
+  <rect x="105.846" y="205.5" fill="#26201A" width="289.479" height="3.467"/>
+</g>
+</svg>
